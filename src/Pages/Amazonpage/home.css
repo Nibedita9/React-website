@@ -34,7 +34,7 @@
 
 /* card image  */
 .card-section{
-    padding: 60px;
+    padding: 80px 20px;
     align-items: center;
 }
 .card-container{
@@ -62,6 +62,6 @@
     
 }
 
-.slider-container{
+/* .slider-container{
 
-}
+} */

@@ -1,5 +1,9 @@
+"use client";
+
+import { ImageGallery } from "react-image-grid-gallery";
+
 import React from "react";
-import { Link } from "@mui/material";
+// import { a } from "@mui/material";
 import Logo from "../../images/logo.png";
 import Image1 from "../../images/home1.jpg";
 import Image2 from "../../images/home2.jpg";
@@ -25,6 +29,8 @@ import Simg6 from "../../images/row2/y6.jpg";
 import Simg7 from "../../images/row2/y7.jpg";
 import Simg8 from "../../images/row2/y8.jpg";
 
+import Gallary from "../Gallary/Gallary";
+
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
@@ -43,6 +49,71 @@ const settings = {
   slidesToScroll: 3,
 };
 
+
+const imagesArray = [
+  {
+    alt: "Image1's alt text",
+    caption: "Image1's description",
+    src:Image1 ,
+  },
+  {
+      alt: "Image1's alt text",
+      caption: "Image1's description",
+      src:Image4 ,
+    },
+    {
+      alt: "Image1's alt text",
+      caption: "Image1's description",
+      src:Image6 ,
+    },
+    {
+      alt: "Image1's alt text",
+      caption: "Image1's description",
+      src:Image1 ,
+    },
+    {
+        alt: "Image1's alt text",
+        caption: "Image1's description",
+        src:Image4 ,
+      },
+      {
+        alt: "Image1's alt text",
+        caption: "Image1's description",
+        src:Image6 ,
+      },
+
+      {
+        alt: "Image1's alt text",
+        caption: "Image1's description",
+        src:Image1 ,
+      },
+      {
+          alt: "Image1's alt text",
+          caption: "Image1's description",
+          src:Image4 ,
+        },
+        {
+          alt: "Image1's alt text",
+          caption: "Image1's description",
+          src:Image6 ,
+        },
+        {
+          alt: "Image1's alt text",
+          caption: "Image1's description",
+          src:Image1 ,
+        },
+        {
+            alt: "Image1's alt text",
+            caption: "Image1's description",
+            src:Image4 ,
+          },
+          {
+            alt: "Image1's alt text",
+            caption: "Image1's description",
+            src:Image6 ,
+          },
+];
+
 export default function Home() {
   return (
     <div>
@@ -52,21 +123,21 @@ export default function Home() {
           <img src={Logo} />
         </div>
         <ul className="navbar">
-          <Link src="/">
+          <a href="/">
             <li>Home</li>
-          </Link>
-          <Link src="/">
+          </a>
+          <a href="../Gallary/Gallary">
             <li>Gallary</li>
-          </Link>
-          <Link src="/">
+          </a>
+          <a href="/">
             <li>Mobile</li>
-          </Link>
-          <Link src="/">
+          </a>
+          <a href="/">
             <li>Cloth</li>
-          </Link>
-          <Link src="/">
+          </a>
+          <a src="/">
             <li>Today's Deal</li>
-          </Link>
+          </a>
         </ul>
       </nav>
 
@@ -219,6 +290,16 @@ export default function Home() {
           </Slider>
         </div>
       </section>
+
+      <div style={{padding:"40px 20px"}}>
+         <ImageGallery
+      imagesInfoArray={imagesArray}
+      columnWidth={330}
+      rowWidth={830}
+
+      gapSize={24}
+    />
+    </div>
 
       <footer style={{background:"white",padding:"10px"}}>
         copyright@footer.com
